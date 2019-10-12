@@ -1,5 +1,11 @@
 const data = [
   {
+    id: "homepage",
+    icon: "iconsminds-home",
+    label: "menu.app",
+    to: "/app/home"
+  },
+  {
     id: "dashboards",
     icon: "iconsminds-shop-4",
     label: "menu.dashboards",
