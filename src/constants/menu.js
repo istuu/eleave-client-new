@@ -3,7 +3,7 @@ const data = [
     id: "homepage",
     icon: "iconsminds-home",
     label: "menu.app",
-    to: "/app/home"
+    to: "/admin/home"
   },
   {
     id: "dashboards",

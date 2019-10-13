@@ -21,8 +21,9 @@ export const firebaseConfig = {
   messagingSenderId: "216495999563"
 };
 
-export const searchPath = "/app/pages/search";
+export const searchPath  = "/app/pages/search";
 export const servicePath = "https://api.coloredstrategies.com";
+export const serviceAPI  = "http://35.197.155.131:8080";
 
 /* 
 Color Options:

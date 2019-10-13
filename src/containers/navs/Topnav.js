@@ -5,13 +5,11 @@ import {
   DropdownItem,
   DropdownToggle,
   DropdownMenu,
-  Input
 } from "reactstrap";
 
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 
-import IntlMessages from "../../helpers/IntlMessages";
 import {
   setContainerClassnames,
   clickOnMobileMenu,
@@ -22,7 +20,6 @@ import {
 import {
   menuHiddenBreakpoint,
   searchPath,
-  localeOptions
 } from "../../constants/defaultValues";
 
 import { MobileMenuIcon, MenuIcon } from "../../components/svg";
@@ -38,10 +35,7 @@ class TopNav extends Component {
       searchKeyword: ""
     };
   }
-
-  handleChangeLocale = locale => {
-    this.props.changeLocale(locale);
-  };
+  
   isInFullScreen = () => {
     return (
       (document.fullscreenElement && document.fullscreenElement !== null) ||
@@ -185,8 +179,7 @@ class TopNav extends Component {
   };
 
   render() {
-    const { containerClassnames, menuClickCount, locale } = this.props;
-    const { messages } = this.props.intl;
+    const { containerClassnames, menuClickCount } = this.props;
     return (
       <nav className="navbar fixed-top">
         <NavLink
@@ -206,48 +199,6 @@ class TopNav extends Component {
           <MobileMenuIcon />
         </NavLink>
 
-        <div className="search" data-search-path="/app/pages/search">
-          <Input
-            name="searchKeyword"
-            id="searchKeyword"
-            placeholder={messages["menu.search"]}
-            value={this.state.searchKeyword}
-            onChange={e => this.handleSearchInputChange(e)}
-            onKeyPress={e => this.handleSearchInputKeyPress(e)}
-          />
-          <span
-            className="search-icon"
-            onClick={e => this.handleSearchIconClick(e)}
-          >
-            <i className="simple-icon-magnifier" />
-          </span>
-        </div>
-
-        <div className="d-inline-block">
-          <UncontrolledDropdown className="ml-2">
-            <DropdownToggle
-              caret
-              color="light"
-              size="sm"
-              className="language-button"
-            >
-              <span className="name">{locale.toUpperCase()}</span>
-            </DropdownToggle>
-            <DropdownMenu className="mt-3" right>
-              {localeOptions.map(l => {
-                return (
-                  <DropdownItem
-                    onClick={() => this.handleChangeLocale(l.id)}
-                    key={l.id}
-                  >
-                    {l.name}
-                  </DropdownItem>
-                );
-              })}
-            </DropdownMenu>
-          </UncontrolledDropdown>
-        </div>
-
         <a className="navbar-logo" href="/">
           <span className="logo d-none d-xs-block" />
           <span className="logo-mobile d-block d-xs-none" />
@@ -255,15 +206,6 @@ class TopNav extends Component {
 
         <div className="ml-auto">
           <div className="header-icons d-inline-block align-middle">
-            <div className="position-relative d-none d-none d-lg-inline-block">
-              <a
-                className="btn btn-outline-primary btn-sm mb-2 mr-3"
-                target="_top"
-                href="https://themeforest.net/cart/configure_before_adding/22544383?license=regular&ref=ColoredStrategies&size=source"
-              >
-                <IntlMessages id="user.buy" />
-              </a>
-            </div>
             <TopnavEasyAccess />
             <TopnavNotifications />
             <button

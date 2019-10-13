@@ -13,6 +13,7 @@ import ColorSwitcher from "./components/common/ColorSwitcher";
 import NotificationContainer from "./components/common/react-notifications/NotificationContainer";
 import { isMultiColorActive } from "./constants/defaultValues";
 import main from "./views";
+import admin from "./views/admin";
 import app from "./views/app";
 import user from "./views/user";
 import error from "./views/error";
@@ -51,7 +52,8 @@ class App extends Component {
             {isMultiColorActive && <ColorSwitcher />}
             <Router>
               <Switch>
-                <AuthRoute path="/app" authUser={loginUser} component={app} />
+                <AuthRoute path="/admin" authUser={loginUser} component={admin} />
+                <Route path="/app" component={app} />
                 <Route path="/user" component={user} />
                 <Route path="/error" exact component={error} />
                 <Route path="/" exact component={main} />
