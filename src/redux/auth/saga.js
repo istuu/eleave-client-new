@@ -7,32 +7,60 @@ import {
     LOGOUT_USER
 } from '../actions';
 
+import Swal from 'sweetalert2';
+import { serviceAPI } from "../../constants/defaultValues";
+
 import {
     loginUserSuccess,
     registerUserSuccess
 } from './actions';
 
-const loginWithEmailPasswordAsync = async (email, password) =>
-    await auth.signInWithEmailAndPassword(email, password)
-        .then(authUser => authUser)
-        .catch(error => error);
+const loginWithEmailPasswordAsync = async (payload) => {
+    const apiUrl = serviceAPI + "/api/login";
 
+    return await new Promise((success, fail) => {
+        const urlFetch = fetch(apiUrl,{
+            method: 'POST',
+            body: JSON.stringify(payload)
+        });
+        urlFetch.then(res => {
+            return res.json();
+        }).then(resJson => {
+            success(resJson);
+        });
+    })
+    .then(response => response)
+    .catch(error => error);
+}
 
 
 function* loginWithEmailPassword({ payload }) {
-    const { email, password } = payload.user;
+    // const { email, password } = payload.user;
     const { history } = payload;
     try {
-        const loginUser = yield call(loginWithEmailPasswordAsync, email, password);
-        if (!loginUser.message) {
-            localStorage.setItem('user_id', loginUser.user.uid);
+        const loginUser = yield call(loginWithEmailPasswordAsync, payload.user);
+        const loginData = loginUser.body
+        if (loginUser.error === null) {
+            localStorage.setItem('user_id', loginData['ID']);
+            localStorage.setItem('token', loginData['Token']);
+            localStorage.setItem('role', loginData['Role']);
             yield put(loginUserSuccess(loginUser));
             history.push('/');
         } else {
-            console.log('login failed :', loginUser.message)
+            console.log('login failed :', loginUser.error)
+            Swal.fire(
+                'Whoops!',
+                loginUser.error,
+                'error'
+            )
         }
     } catch (error) {
         console.log('login error : ', error)
+        Swal.fire(
+            'Whoops!',
+            error,
+            'error'
+        )
     }
 }
 

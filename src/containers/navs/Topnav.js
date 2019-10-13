@@ -23,8 +23,8 @@ import {
 } from "../../constants/defaultValues";
 
 import { MobileMenuIcon, MenuIcon } from "../../components/svg";
-import TopnavEasyAccess from "./Topnav.EasyAccess";
-import TopnavNotifications from "./Topnav.Notifications";
+// import TopnavEasyAccess from "./Topnav.EasyAccess";
+// import TopnavNotifications from "./Topnav.Notifications";
 
 class TopNav extends Component {
   constructor(props) {
@@ -206,8 +206,8 @@ class TopNav extends Component {
 
         <div className="ml-auto">
           <div className="header-icons d-inline-block align-middle">
-            <TopnavEasyAccess />
-            <TopnavNotifications />
+            {/* <TopnavEasyAccess /> */}
+            {/* <TopnavNotifications /> */}
             <button
               className="header-icon btn btn-empty d-none d-sm-inline-block"
               type="button"
@@ -224,16 +224,16 @@ class TopNav extends Component {
           <div className="user d-inline-block">
             <UncontrolledDropdown className="dropdown-menu-right">
               <DropdownToggle className="p-0" color="empty">
-                <span className="name mr-1">Sarah Kortney</span>
+                <span className="name mr-1">Account</span>
                 <span>
-                  <img alt="Profile" src="/assets/img/profile-pic-l.jpg" />
+                  <img alt="Profile" src="/assets/img/img-user.png" />
                 </span>
               </DropdownToggle>
               <DropdownMenu className="mt-3" right>
                 <DropdownItem>Account</DropdownItem>
-                <DropdownItem>Features</DropdownItem>
+                {/* <DropdownItem>Features</DropdownItem>
                 <DropdownItem>History</DropdownItem>
-                <DropdownItem>Support</DropdownItem>
+                <DropdownItem>Support</DropdownItem> */}
                 <DropdownItem divider />
                 <DropdownItem onClick={() => this.handleLogout()}>
                   Sign out

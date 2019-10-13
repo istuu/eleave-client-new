@@ -10,14 +10,20 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "demo@gogo.com",
-      password: "gogo123"
+      email: "",
+      password: ""
     };
   }
   onUserLogin() {
     if (this.state.email !== "" && this.state.password !== "") {
       this.props.loginUser(this.state, this.props.history);
     }
+  }
+  handleFormChange = (e) => {
+    if(e.target.name === "email")
+      this.setState({email : e.target.value});
+    if(e.target.name === "password")
+      this.setState({password : e.target.value});
   }
 
   render() {
@@ -26,15 +32,9 @@ class Login extends Component {
         <Colxx xxs="12" md="10" className="mx-auto my-auto">
           <Card className="auth-card">
             <div className="position-relative image-side ">
-              <p className="text-white h2">MAGIC IS IN THE DETAILS</p>
+              <p className="text-white h2">E-LEAVE MANAGEMENT SYSTEM</p>
               <p className="white mb-0">
-                Please use your credentials to login.
-                <br />
-                If you are not a member, please{" "}
-                <NavLink to={`/register`} className="white">
-                  register
-                </NavLink>
-                .
+                PT. TNIS Service Indonesia
               </p>
             </div>
             <div className="form-side">
@@ -46,15 +46,12 @@ class Login extends Component {
               </CardTitle>
               <Form>
                 <Label className="form-group has-float-label mb-4">
-                  <Input type="email" defaultValue={this.state.email} />
+                  <Input type="email" name="email" onChange={this.handleFormChange} />
                   <IntlMessages id="user.email" />
                 </Label>
                 <Label className="form-group has-float-label mb-4">
-                  <Input type="password" />
-                  <IntlMessages
-                    id="user.password"
-                    defaultValue={this.state.password}
-                  />
+                  <Input type="password" name="password" onChange={this.handleFormChange} />
+                  <IntlMessages id="user.password"/>
                 </Label>
                 <div className="d-flex justify-content-between align-items-center">
                   <NavLink to={`/forgot-password`}>
