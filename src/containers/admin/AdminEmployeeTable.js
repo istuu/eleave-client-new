@@ -4,10 +4,12 @@ import IntlMessages from "../../helpers/IntlMessages";
 import DataTablePagination from "../../components/DatatablePagination";
 import {
     Button,
+    NavLink,
     Card,
     CardBody,
     CardTitle
 } from "reactstrap";
+import { NavLink as RRNavLink } from 'react-router-dom';
 const dataTableColumns = [
     {
         Header: "ID",
@@ -54,17 +56,26 @@ const dataTableColumns = [
     },
 ];
 
-export const AdminEmployeeTable = ({props,data}) => {
+export const AdminEmployeeTable = ({props,data,list = false}) => {
   return (
     <Card className="mb-4">
       <CardBody>
-        <CardTitle>
-          <IntlMessages id="table.employee-table" />
-        </CardTitle>
+        {list ? (
+           <NavLink tag={RRNavLink} exact to="/admin/employee/add">
+            <Button color="primary" size="md" className="mb-2" >
+              <span className="simple-icon-plus"></span> {" "}
+              <IntlMessages id="button.add-employee" />
+            </Button>
+          </NavLink>
+        ) : (
+          <CardTitle>
+            <IntlMessages id="table.employee-table" />
+          </CardTitle>
+        )} 
         <ReactTable
           data={data}
           columns={dataTableColumns}
-          defaultPageSize={5}
+          defaultPageSize={list ? 10 : 5 }
           showPageJump={true}
           showPageSizeOptions={true}
           PaginationComponent={DataTablePagination}

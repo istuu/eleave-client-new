@@ -1,42 +1,8 @@
-/* Gogo Language Texts
-
-Table of Contents
-
-01.General
-02.User Login, Logout, Register
-03.Menu
-04.Dashboards
-05.Pages
-06.Applications
-  06.01.Chat
-  06.02.Survey
-  06.03.Todo
-07.UI
-  07.01.Alerts
-  07.02.Badges
-  07.03.Buttons
-  07.04.Cards
-  07.05.Carousel
-  07.06.Charts
-  07.07.Collapse
-  07.08.Dropdowns
-  07.09.Editors
-  07.10.Forms
-  07.11.Form Components
-  07.12.Icons
-  07.13.Input Groups
-  07.14.Jumbotron
-  07.15.Modal
-  07.16.Navigation
-  07.17.Popover & Tooltip
-  07.18.Sortable
-  07.19.Maps
-  07.20.Tables
-*/
+/* Language Texts*/
 
 module.exports = {
   /* 01.General */
-  "general.copyright": "Gogo React © 2018 All Rights Reserved.",
+  "general.copyright": "PT. TNIS Service Indonesia © 2019. All Right Reserved.",
 
   /* 02.User Login, Logout, Register */
   "user.login-title": "Login",
@@ -54,6 +20,7 @@ module.exports = {
 
   /* 03.Menu */
   "menu.app": "Home",
+  "menu.admin": "Home",
   "menu.employee": "Employee Data",
   "menu.form-leave": "Form Leave",
   "menu.leave-request": "Leave Request",
@@ -64,59 +31,8 @@ module.exports = {
   "menu.account-setting": "Account Setting",
   "menu.configuration": "Configuration",
   "menu.dashboards": "Dashboards",
-
-  /* 04.Dashboards */
-  "dashboards.pending-orders": "Pending Orders",
-  "dashboards.completed-orders": "Completed Orders",
-  "dashboards.refund-requests": "Refund Requests",
-  "dashboards.new-comments": "New Comments",
-  "dashboards.sales": "Sales",
-  "dashboards.orders": "Orders",
-  "dashboards.refunds": "Refunds",
-  "dashboards.recent-orders": "Recent Orders",
-  "dashboards.product-categories": "Product Categories",
-  "dashboards.cakes": "Cakes",
-  "dashboards.tickets": "Tickets",
-  "dashboards.calendar": "Calendar",
-  "dashboards.best-sellers": "Best Sellers",
-  "dashboards.website-visits": "Website Visits",
-  "dashboards.unique-visitors": "Unique Visitors",
-  "dashboards.this-week": "This Week",
-  "dashboards.last-week": "Lat Week",
-  "dashboards.this-month": "This Month",
-  "dashboards.conversion-rates": "Conversion Rates",
-  "dashboards.per-session": "Per Session",
-  "dashboards.profile-status": "Profile Status",
-  "dashboards.payment-status": "Payment Status",
-  "dashboards.work-progress": "Work Progress",
-  "dashboards.tasks-completed": "Tasks Completed",
-  "dashboards.payments-done": "Payments Done",
-  "dashboards.order-stock": "Order - Stock",
-  "dashboards.categories": "Categories",
-  "dashboards.quick-post": "Quick Post",
-  "dashboards.title": "Title",
-  "dashboards.content": "Content",
-  "dashboards.category": "Category",
-  "dashboards.save-and-publish": "Save and Publish",
-  "dashboards.top-viewed-posts": "Top Viewed Posts",
-  "dashboards.posts": "Posts",
-  "dashboards.pending-for-publish": "Pending for publish",
-  "dashboards.users": "Users",
-  "dashboards.on-approval-process": "On approval process",
-  "dashboards.alerts": "Alerts",
-  "dashboards.waiting-for-notice": "Waiting for notice",
-  "dashboards.files": "Files",
-  "dashboards.pending-for-print": "Pending for print",
-  "dashboards.logs": "Logs",
-  "dashboards.gogo": "GOGO",
-  "dashboards.magic-is-in-the-details": "MAGIC IS IN THE DETAILS",
-  "dashboards.yes-it-is-indeed": "Yes, it is indeed!",
-  "dashboards.advanced-search": "Advanced Search",
-  "dashboards.toppings": "Toppings",
-  "dashboards.type": "Type",
-  "dashboards.keyword": "Keyword",
-  "dashboards.search": "Search",
-  "dashboards.top-rated-items": "Top Rated Items",
+  "menu.list": "List",
+  "menu.add": "Add",
 
   /* 05.Pages */
   "pages.add-new": "ADD NEW",
@@ -151,100 +67,9 @@ module.exports = {
   "pages.react-version":"React Version",
   "pages.inline-version":"Inline Styled Html Version",
 
-  /* 06.Applications */
-
-  /* 06.01.Chat */
-  "chat.messages": "Messages",
-  "chat.contacts": "Contacts",
-  "chat.saysomething": "Say something..",
-
-
-  /* 06.02.Survey */
-  "survey.delete": "Delete",
-  "survey.edit": "Edit",
-  "survey.add-new": "ADD NEW",
-  "survey.add-new-title": "Add New Survey",
-  "survey.title": "Title",
-  "survey.category": "Category",
-  "survey.label": "Label",
-  "survey.status": "Status",
-  "survey.cancel": "Cancel",
-  "survey.submit": "Submit",
-  "survey.another-action": "Another action",
-  "survey.display-options": "Display Options",
-  "survey.orderby": "Order By : ",
-  "survey.all-surveys": "All Surveys",
-  "survey.completed-surveys": "Completed Surveys",
-  "survey.categories": "Categories",
-  "survey.active-surveys": "Active Surveys",
-  "survey.labels": "Labels",
-
-  /* 06.03.Todo */
-  "todo.add-new": "ADD NEW",
-  "todo.add-new-title": "Add New Todo",
-  "todo.title": "Title",
-  "todo.detail": "Detail",
-  "todo.category": "Category",
-  "todo.label": "Label",
-  "todo.status": "Status",
-  "todo.cancel": "Cancel",
-  "todo.submit": "Submit",
-  "todo.action": "Action",
-  "todo.another-action": "Another action",
-  "todo.display-options": "Display Options",
-  "todo.orderby": "Order By : ",
-  "todo.all-tasks": "All Tasks",
-  "todo.pending-tasks": "Pending Tasks",
-  "todo.completed-tasks": "Completed Tasks",
-  "todo.categories": "Categories",
-  "todo.labels": "Labels",
-
-  /* 07.UI */
-
-  /* 07.01.Alerts */
-  "alert.rounded": "Rounded Alert",
-  "alert.react-notifications": "React Notifications",
-  "alert.outline": "Outline",
-  "alert.primary": "Primary",
-  "alert.secondary": "Secondary",
-  "alert.info": "Info",
-  "alert.success": "Success",
-  "alert.warning": "Warning",
-  "alert.error": "Error",
-  "alert.filled": "Filled",
-  "alert.primary-text": "This is a primary alert—check it out!",
-  "alert.secondary-text": "This is a secondary alert—check it out!",
-  "alert.success-text": "This is a success alert—check it out!",
-  "alert.danger-text": "This is a danger alert—check it out!",
-  "alert.warning-text": "This is a warning alert—check it out!",
-  "alert.info-text": "This is a info alert—check it out!",
-  "alert.light-text": "This is a light alert—check it out!",
-  "alert.dark-text": "This is a dark alert—check it out!",
-  "alert.default": "Default Alert",
-  "alert.dismissing": "Dismissing Alert",
-  "alert.dismissing-text":
-    "Holy guacamole! You should check in on some of those fields below.",
-  "alert.dismissing-without-animate-text":
-    "I am an alert and I can be dismissed without animating!",
-
-  /* 07.02.Badges */
-  "badge.sizes": "Sizes",
-  "badge.colors": "Colors",
-  "badge.outline": "Outline",
-  "badge.links": "Links",
-  "badge.counter-badges": "Counter Badges",
-  "badge.bootstrap-default": "Bootstrap Default",
-  "badge.primary": "Primary",
-  "badge.secondary": "Secondary",
-  "badge.success": "Success",
-  "badge.danger": "Danger",
-  "badge.warning": "Warning",
-  "badge.info": "Info",
-  "badge.light": "Light",
-  "badge.dark": "Dark",
-
   /* 07.03.Buttons */
   "button.leave-balance": "Leave Balance",
+  "button.add-employee": "Add Employee Data",
   "button.default": "Bootstrap Default",
   "button.colors": "Colors",
   "button.rounded": "Rounded",

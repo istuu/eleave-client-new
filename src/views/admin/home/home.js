@@ -23,35 +23,35 @@ class HomeDashboard extends Component {
 
     render() {
         const {employeeItems, loading} = this.props.employeeListApp
-        const { messages } = this.props.intl;
+        // const { messages } = this.props.intl;
         return (
             <Fragment>
                 <Row>
                     <Colxx lg="4" md="6" className="mb-4">
                         <GradientWithRadialProgressCard
+                        icon="iconsminds-male-female"
+                        title="Employees"
+                        detail="Number of registered users"
+                        percent={100}
+                        progressText="16"
+                        />
+                    </Colxx>
+                    <Colxx lg="4" md="6" className="mb-4">
+                        <GradientWithRadialProgressCard
+                        icon="iconsminds-check"
+                        title="Approved Leave"
+                        detail="Total of approved leave request"
+                        percent={100}
+                        progressText="15"
+                        />
+                    </Colxx>
+                    <Colxx lg="4" md="6" className="mb-4">
+                        <GradientWithRadialProgressCard
                         icon="iconsminds-clock"
-                        title={`5 ${messages["dashboards.posts"]}`}
-                        detail={messages["dashboards.pending-for-publish"]}
-                        percent={(5 * 100) / 12}
-                        progressText="5/12"
-                        />
-                    </Colxx>
-                    <Colxx lg="4" md="6" className="mb-4">
-                        <GradientWithRadialProgressCard
-                        icon="iconsminds-male"
-                        title={`4 ${messages["dashboards.users"]}`}
-                        detail={messages["dashboards.on-approval-process"]}
-                        percent={(4 * 100) / 6}
-                        progressText="4/6"
-                        />
-                    </Colxx>
-                    <Colxx lg="4" md="6" className="mb-4">
-                        <GradientWithRadialProgressCard
-                        icon="iconsminds-bell"
-                        title={`8 ${messages["dashboards.alerts"]}`}
-                        detail={messages["dashboards.waiting-for-notice"]}
-                        percent={(8 * 100) / 10}
-                        progressText="8/10"
+                        title="Pending Leave"
+                        detail="Total of pending leave request"
+                        percent={100}
+                        progressText="5"
                         />
                     </Colxx>
                 </Row>
