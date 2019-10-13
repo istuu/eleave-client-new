@@ -11,8 +11,9 @@ import {
 } from "../../../redux/actions";
 
 import {
-    AdminEmployeeData,
-} from "../../../containers/admin/AdminEmployeeData";
+    AdminEmployeeTable,
+} from "../../../containers/admin/AdminEmployeeTable";
+import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
 
 class HomeDashboard extends Component {
 
@@ -22,18 +23,42 @@ class HomeDashboard extends Component {
 
     render() {
         const {employeeItems, loading} = this.props.employeeListApp
-        console.log(this.props)
+        const { messages } = this.props.intl;
         return (
             <Fragment>
+                <Row>
+                    <Colxx lg="4" md="6" className="mb-4">
+                        <GradientWithRadialProgressCard
+                        icon="iconsminds-clock"
+                        title={`5 ${messages["dashboards.posts"]}`}
+                        detail={messages["dashboards.pending-for-publish"]}
+                        percent={(5 * 100) / 12}
+                        progressText="5/12"
+                        />
+                    </Colxx>
+                    <Colxx lg="4" md="6" className="mb-4">
+                        <GradientWithRadialProgressCard
+                        icon="iconsminds-male"
+                        title={`4 ${messages["dashboards.users"]}`}
+                        detail={messages["dashboards.on-approval-process"]}
+                        percent={(4 * 100) / 6}
+                        progressText="4/6"
+                        />
+                    </Colxx>
+                    <Colxx lg="4" md="6" className="mb-4">
+                        <GradientWithRadialProgressCard
+                        icon="iconsminds-bell"
+                        title={`8 ${messages["dashboards.alerts"]}`}
+                        detail={messages["dashboards.waiting-for-notice"]}
+                        percent={(8 * 100) / 10}
+                        progressText="8/10"
+                        />
+                    </Colxx>
+                </Row>
                 {loading ? (
                 <Row>
                     <Colxx xxs="12">
-                        <h3 className="mb-4">
-                        <IntlMessages id="table.react-tables" />
-                        </h3>
-                    </Colxx>
-                    <Colxx xxs="12">
-                        <AdminEmployeeData data={employeeItems} />
+                        <AdminEmployeeTable data={employeeItems} />
                     </Colxx>
                 </Row>
                 ) : (

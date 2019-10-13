@@ -303,6 +303,7 @@ module.exports = {
   "badge.dark": "Dark",
 
   /* 07.03.Buttons */
+  "button.leave-balance": "Leave Balance",
   "button.default": "Bootstrap Default",
   "button.colors": "Colors",
   "button.rounded": "Rounded",
@@ -563,6 +564,7 @@ module.exports = {
   "maps.yandex": "Yandex",
 
   /* 07.20.Tables */
+  "table.employee-table": "Employee Data",
   "table.bootstrap-tables": "Bootstrap Tables",
   "table.bootstrap-basic": "Basic Table",
   "table.bootstrap-striped": "Striped Rows",

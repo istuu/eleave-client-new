@@ -47,19 +47,19 @@ const dataTableColumns = [
                     <div className="glyph-icon simple-icon-trash" />
                 </Button>
                 <Button style={{textAlign:"right"}} color="info" size="xs" className="mb-2" title="Delete Employee">
-                    <IntlMessages id="Leave Balance" />
+                    <IntlMessages id="button.leave-balance" />
                 </Button>
             </div>,
         width: 200
     },
 ];
 
-export const AdminEmployeeData = ({props,data}) => {
+export const AdminEmployeeTable = ({props,data}) => {
   return (
     <Card className="mb-4">
       <CardBody>
         <CardTitle>
-          <IntlMessages id="table.react-pagination" />
+          <IntlMessages id="table.employee-table" />
         </CardTitle>
         <ReactTable
           data={data}
