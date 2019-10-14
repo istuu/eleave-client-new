@@ -9,7 +9,7 @@ export const menuHiddenBreakpoint = 768;
 export const defaultLocale = "en";
 export const localeOptions = [
   { id: "en", name: "English" },
-  { id: "es", name: "Español" }
+  { id: "id", name: "Indonesia" }
 ];
 
 export const firebaseConfig = {
@@ -23,7 +23,7 @@ export const firebaseConfig = {
 
 export const searchPath  = "/app/pages/search";
 export const servicePath = "https://api.coloredstrategies.com";
-export const serviceAPI  = "http://35.197.155.131:8080";
+export const serviceAPI  = "http://127.0.0.1:8080";
 
 /* 
 Color Options:

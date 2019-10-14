@@ -33,6 +33,7 @@ module.exports = {
   "menu.dashboards": "Dashboards",
   "menu.list": "List",
   "menu.add": "Add",
+  "menu.pending": "List of Pending Request",
 
   /* 05.Pages */
   "pages.add-new": "ADD NEW",
@@ -331,6 +332,7 @@ module.exports = {
 
   /* 07.20.Tables */
   "table.employee-table": "Employee Data",
+  "table.leave-pending-table": "List of Pending Request",
   "table.bootstrap-tables": "Bootstrap Tables",
   "table.bootstrap-basic": "Basic Table",
   "table.bootstrap-striped": "Striped Rows",

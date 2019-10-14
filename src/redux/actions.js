@@ -3,6 +3,10 @@ export const EMPLOYEE_LIST_GET_LIST = "EMPLOYEE_LIST_GET_LIST";
 export const EMPLOYEE_LIST_GET_LIST_SUCCESS = "EMPLOYEE_LIST_GET_LIST_SUCCESS";
 export const EMPLOYEE_LIST_GET_LIST_ERROR = "EMPLOYEE_LIST_GET_LIST_ERROR";
 
+export const LEAVE_LIST_GET_PENDING_LIST = "LEAVE_LIST_GET_PENDING_LIST";
+export const LEAVE_LIST_GET_PENDING_LIST_SUCCESS = "LEAVE_LIST_GET_PENDING_LIST_SUCCESS";
+export const LEAVE_LIST_GET_PENDING_LIST_ERROR = "LEAVE_LIST_GET_PENDING_LIST_ERROR";
+
 /* SETTINGS */
 export const CHANGE_LOCALE = "CHANGE_LOCALE";
 export const CLEAR_FIELD = "CLEAR_FIELD"
@@ -70,6 +74,7 @@ export const SURVEY_DELETE_QUESTION = "SURVEY_DELETE_QUESTION";
 export const SURVEY_SAVE = "SURVEY_SAVE";
 
 export * from "./employeeList/actions";
+export * from "./leaveList/actions";
 export * from "./menu/actions";
 export * from "./settings/actions";
 export * from "./auth/actions";
