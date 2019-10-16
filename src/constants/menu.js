@@ -30,13 +30,13 @@ const data = [
       },
       {
         icon: "simple-icon-check",
-        label: "menu.leave-request-approve",
-        to: "/admin/leave-request/approve"
+        label: "menu.leave-request-approved",
+        to: "/admin/leave-request/approved"
       },
       {
         icon: "simple-icon-close",
-        label: "menu.leave-request-pending",
-        to: "/admin/leave-request/reject"
+        label: "menu.leave-request-rejected",
+        to: "/admin/leave-request/rejected"
       }
     ]
   },

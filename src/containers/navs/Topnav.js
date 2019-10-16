@@ -224,7 +224,7 @@ class TopNav extends Component {
           <div className="user d-inline-block">
             <UncontrolledDropdown className="dropdown-menu-right">
               <DropdownToggle className="p-0" color="empty">
-                <span className="name mr-1">Account</span>
+                <span className="name mr-1">{localStorage.getItem('name')}</span>
                 <span>
                   <img alt="Profile" src="/assets/img/img-user.png" />
                 </span>

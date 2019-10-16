@@ -25,8 +25,8 @@ module.exports = {
   "menu.form-leave": "Form Leave",
   "menu.leave-request": "Leave Request",
   "menu.leave-request-pending": "List of Pending Request",
-  "menu.leave-request-approve": "List of Approve Request",
-  "menu.leave-request-reject": "List of Reject Request",
+  "menu.leave-request-approved": "List of Approved Request",
+  "menu.leave-request-rejected": "List of Rejected Request",
   "menu.setting": "Settings",
   "menu.account-setting": "Account Setting",
   "menu.configuration": "Configuration",
@@ -34,6 +34,8 @@ module.exports = {
   "menu.list": "List",
   "menu.add": "Add",
   "menu.pending": "List of Pending Request",
+  "menu.approved": "List of Approved Request",
+  "menu.rejected": "List of Rejected Request",
 
   /* 05.Pages */
   "pages.add-new": "ADD NEW",
@@ -333,6 +335,8 @@ module.exports = {
   /* 07.20.Tables */
   "table.employee-table": "Employee Data",
   "table.leave-pending-table": "List of Pending Request",
+  "table.leave-approved-table": "List of Approved Request",
+  "table.leave-rejected-table": "List of Rejected Request",
   "table.bootstrap-tables": "Bootstrap Tables",
   "table.bootstrap-basic": "Basic Table",
   "table.bootstrap-striped": "Striped Rows",
