@@ -11,11 +11,18 @@ import {
     getLeavePendingList,
 } from "../../../redux/actions";
 
-import {
-    AdminLeaveTable,
-} from "../../../containers/admin/AdminLeaveTable";
+import {AdminLeaveTable} from "../../../containers/admin/AdminLeaveTable";
 
 class LeavePendingList extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            visible :false,
+            detail: null
+        };
+    }
 
     componentDidMount(){
         this.props.getLeavePendingList();

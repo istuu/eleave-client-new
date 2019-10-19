@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import employeeListApp from './employeeList/reducer';
 import leaveListApp from './leaveList/reducer';
+import userApp from './user/reducer';
 import settings from './settings/reducer';
 import menu from './menu/reducer';
 import authUser from './auth/reducer';
@@ -12,6 +13,7 @@ import surveyDetailApp from './surveyDetail/reducer';
 const reducers = combineReducers({
   employeeListApp,
   leaveListApp,
+  userApp,
   menu,
   settings,
   authUser,

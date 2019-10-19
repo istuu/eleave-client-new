@@ -11,9 +11,7 @@ import {
     getEmployeeList,
 } from "../../../redux/actions";
 
-import {
-    AdminEmployeeTable,
-} from "../../../containers/admin/AdminEmployeeTable";
+import AdminEmployeeTable from "../../../containers/admin/AdminEmployeeTable";
 
 class EmployeeList extends Component {
 

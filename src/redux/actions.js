@@ -13,6 +13,11 @@ export const LEAVE_LIST_GET_REJECTED_LIST = "LEAVE_LIST_GET_REJECTED_LIST";
 export const LEAVE_LIST_GET_REJECTED_LIST_SUCCESS = "LEAVE_LIST_GET_REJECTED_LIST_SUCCESS";
 export const LEAVE_LIST_GET_REJECTED_LIST_ERROR = "LEAVE_LIST_GET_REJECTED_LIST_ERROR";
 
+/* USER */
+export const USER_GET_TYPE_LEAVE = "USER_GET_TYPE_LEAVE";
+export const USER_GET_TYPE_LEAVE_SUCCESS = "USER_GET_TYPE_LEAVE_SUCCESS";
+export const USER_GET_TYPE_LEAVE_ERROR = "USER_GET_TYPE_LEAVE_ERROR";
+
 /* SETTINGS */
 export const CHANGE_LOCALE = "CHANGE_LOCALE";
 export const CLEAR_FIELD = "CLEAR_FIELD"
@@ -81,6 +86,7 @@ export const SURVEY_SAVE = "SURVEY_SAVE";
 
 export * from "./employeeList/actions";
 export * from "./leaveList/actions";
+export * from "./user/actions";
 export * from "./menu/actions";
 export * from "./settings/actions";
 export * from "./auth/actions";
