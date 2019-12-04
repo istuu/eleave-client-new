@@ -21,7 +21,8 @@ module.exports = {
   /* 03.Menu */
   "menu.app": "Home",
   "menu.admin": "Home",
-  "menu.employee": "Employee Data",
+  "menu.employee": "Employee",
+  "menu.home": "Home",
   "menu.form-leave": "Form Leave",
   "menu.leave-request": "Leave Request",
   "menu.leave-request-pending": "List of Pending Request",

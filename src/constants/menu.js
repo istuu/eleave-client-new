@@ -1,4 +1,4 @@
-const data = [
+const menu_admin = [
   {
     id: "homepage",
     icon: "iconsminds-home",
@@ -59,4 +59,22 @@ const data = [
     ]
   },
 ];
+
+const menu_employee = [
+  {
+    id: "homepage",
+    icon: "iconsminds-home",
+    label: "menu.app",
+    to: "/employee/home"
+  },
+];
+
+let data = [];
+
+if(localStorage.getItem('role') === 'admin') {
+  data = menu_admin;
+}else if(localStorage.getItem('role') === 'employee') {
+  data = menu_employee;
+}
+
 export default data;

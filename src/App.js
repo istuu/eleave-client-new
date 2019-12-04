@@ -14,6 +14,7 @@ import NotificationContainer from "./components/common/react-notifications/Notif
 import { isMultiColorActive } from "./constants/defaultValues";
 import main from "./views";
 import admin from "./views/admin";
+import employee from "./views/employee";
 import app from "./views/app";
 import user from "./views/user";
 import error from "./views/error";
@@ -53,6 +54,7 @@ class App extends Component {
             <Router>
               <Switch>
                 <AuthRoute path="/admin" authUser={loginUser} component={admin} />
+                <AuthRoute path="/employee" authUser={loginUser} component={employee} />
                 <Route path="/app" component={app} />
                 <Route path="/user" component={user} />
                 <Route path="/error" exact component={error} />

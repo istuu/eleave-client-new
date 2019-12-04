@@ -1,7 +1,7 @@
 {
-  "name": "gogo-react",
+  "name": "e-leave",
   "version": "4.0.0",
-  "description": "Gogo - React Bootstrap 4 Admin Dashboard Template",
+  "description": "E Leave Management System",
   "private": true,
   "dependencies": {
     "availity-reactstrap-validation": "^2.0.4",
