@@ -70,7 +70,6 @@ const menu_employee = [
 ];
 
 let data = [];
-
 if(localStorage.getItem('role') === 'admin') {
   data = menu_admin;
 }else if(localStorage.getItem('role') === 'employee') {
