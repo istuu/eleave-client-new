@@ -8,6 +8,7 @@ import { Colxx, } from "../../../components/common/CustomBootstrap";
 
 import {
     getUserTypeLeave,
+    getUserLeaveSummary,
 } from "../../../redux/actions";
 
 import GradientWithRadialProgressCard from "../../../components/cards/GradientWithRadialProgressCard";
@@ -18,6 +19,7 @@ class HomeDashboard extends Component {
     componentDidMount(){
         let employeeID = localStorage.getItem('user_id')
         this.props.getUserTypeLeave(employeeID);
+        this.props.getUserLeaveSummary(employeeID);
     }
 
     mappingLeaveBalance(type_id) {
@@ -39,13 +41,13 @@ class HomeDashboard extends Component {
     }
 
     render() {
-        const {items, loading} = this.props.userApp
+        const {items, summaries, loading, summaryloader} = this.props.userApp
         return (
             <Fragment>
                 <Row>
                     <Colxx lg="6" md="6" className="mb-4 pull-left">
-                        {loading ? (
-                            <EmployeeSummary items={items} cardClass="dashboard-progress"/>
+                        {summaryloader ? (
+                            <EmployeeSummary summaries={summaries} cardClass="dashboard-progress"/>
                         ) : (
                             <div className="loading" />
                         )}
@@ -84,7 +86,8 @@ export default injectIntl(
     connect(
         mapStateToProps,
         {
-            getUserTypeLeave
+            getUserTypeLeave,
+            getUserLeaveSummary
         }
     )(HomeDashboard)
 );

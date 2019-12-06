@@ -67,6 +67,41 @@ const menu_employee = [
     label: "menu.app",
     to: "/employee/home"
   },
+  {
+    id: "form",
+    icon: "simple-icon-note",
+    label: "menu.form-leave",
+    to: "/employee/form-leave"
+  },
+  {
+    id: "leave-request",
+    icon: "simple-icon-briefcase",
+    label: "menu.leave-request",
+    to: "/employee/leave-request",
+    subs: [
+      {
+        icon: "simple-icon-clock",
+        label: "menu.leave-request-pending",
+        to: "/employee/leave-request/pending"
+      },
+      {
+        icon: "simple-icon-check",
+        label: "menu.leave-request-approved",
+        to: "/employee/leave-request/approved"
+      },
+      {
+        icon: "simple-icon-close",
+        label: "menu.leave-request-rejected",
+        to: "/employee/leave-request/rejected"
+      }
+    ]
+  },
+  {
+    id: "profile",
+    icon: "iconsminds-male",
+    label: "menu.profile",
+    to: "/employee/profile"
+  },
 ];
 
 let data = [];

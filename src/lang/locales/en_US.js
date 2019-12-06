@@ -37,6 +37,7 @@ module.exports = {
   "menu.pending": "List of Pending Request",
   "menu.approved": "List of Approved Request",
   "menu.rejected": "List of Rejected Request",
+  "menu.profile": "Profile",
 
   /* 05.Pages */
   "pages.add-new": "ADD NEW",

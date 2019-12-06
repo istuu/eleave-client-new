@@ -1,15 +1,20 @@
 import {
     USER_GET_TYPE_LEAVE,
     USER_GET_TYPE_LEAVE_SUCCESS,
-    USER_GET_TYPE_LEAVE_ERROR
+	USER_GET_TYPE_LEAVE_ERROR,
+	USER_GET_LEAVE_SUMMARY,
+    USER_GET_LEAVE_SUMMARY_SUCCESS,
+    USER_GET_LEAVE_SUMMARY_ERROR
 } from '../actions';
 
 
 const INIT_STATE = {
 	allItems: null,
 	items:null,
+	summaries:null,
 	error: '',
-	loading:false
+	loading:false,
+	summaryloader:false,
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -23,6 +28,15 @@ const reducer = (state = INIT_STATE, action) => {
 
 		case USER_GET_TYPE_LEAVE_ERROR:
 			return { ...state, loading: true, error: action.payload };
+
+		case USER_GET_LEAVE_SUMMARY:
+			return { ...state, summaryloader: false };
+
+		case USER_GET_LEAVE_SUMMARY_SUCCESS:
+			return { ...state, summaryloader: true, summaries: action.payload };
+
+		case USER_GET_LEAVE_SUMMARY_ERROR:
+			return { ...state, summaryloader: true, error: action.payload };
 
 
 		default: return { ...state };

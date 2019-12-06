@@ -18,10 +18,29 @@ import {
     getLeaveRejectedListError,
 } from "./actions";
 
+// Function to get leave url
+function getLeaveURL(action) {
+    let leaveURL;
+    let user_id = localStorage.getItem('user_id');
+    let role    = localStorage.getItem('role');
+    
+    if(role === "admin"){
+        leaveURL = serviceAPI + "/api/admin/leave/"+action;
+    }else if(role === "director") {
+        leaveURL = serviceAPI + "/api/director/"+action;
+    }else if(role === "supervisor") {
+        leaveURL = serviceAPI + "/api/supervisor/"+action+'/'+user_id;
+    }else{
+        leaveURL = serviceAPI + "/api/employee/"+action+'/'+user_id;
+    }
+
+    return leaveURL
+}
+
 // Pending List
 const getLeavePendingListRequest = async () => {
-    const apiUrl = serviceAPI + "/api/admin/leave/pending";
-
+    const apiUrl = getLeaveURL("pending");
+   
     return await new Promise((success, fail) => {
         const urlFetch = fetch(apiUrl);
         urlFetch.then(res => {
@@ -50,7 +69,7 @@ export function* watchGetPendingList() {
 
 //ApprovedList
 const getLeaveApprovedListRequest = async () => {
-    const apiUrl = serviceAPI + "/api/admin/leave/accept";
+    const apiUrl = getLeaveURL("accept");
 
     return await new Promise((success, fail) => {
         const urlFetch = fetch(apiUrl);
@@ -80,7 +99,7 @@ export function* watchGetApprovedList() {
 
 // Rejected List
 const getLeaveRejectedListRequest = async () => {
-    const apiUrl = serviceAPI + "/api/admin/leave/reject";
+    const apiUrl = getLeaveURL("reject");
 
     return await new Promise((success, fail) => {
         const urlFetch = fetch(apiUrl);

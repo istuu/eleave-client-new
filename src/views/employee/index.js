@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import AppLayout from "../../layout/AppLayout";
 import home from "./home";
+import leaveRequest from "./leaveRequest";
 
 class Admin extends Component {
   render() {
@@ -14,6 +15,7 @@ class Admin extends Component {
         <Switch>
           <Redirect exact from={`${match.url}/`} to={`${match.url}/home`} />
           <Route path={`${match.url}/home`} component={home} />
+          <Route path={`${match.url}/leave-request`} component={leaveRequest} />
           <Redirect to="/error" />
         </Switch>
       </AppLayout>

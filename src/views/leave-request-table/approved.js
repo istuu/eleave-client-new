@@ -4,28 +4,21 @@ import { injectIntl } from "react-intl";
 import { Row } from "reactstrap";
 
 // import IntlMessages from "../../../helpers/IntlMessages";
-import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
-import Breadcrumb from "../../../containers/navs/Breadcrumb";
+import { Colxx, Separator } from "../../components/common/CustomBootstrap";
+import Breadcrumb from "../../containers/navs/Breadcrumb";
 
 import {
-    getLeavePendingList,
-} from "../../../redux/actions";
+    getLeaveApprovedList,
+} from "../../redux/actions";
 
-import {AdminLeaveTable} from "../../../containers/admin/AdminLeaveTable";
+import {
+    LeaveTable,
+} from "../../containers/admin/LeaveTable";
 
-class LeavePendingList extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            visible :false,
-            detail: null
-        };
-    }
+class LeaveApprovedList extends Component {
 
     componentDidMount(){
-        this.props.getLeavePendingList();
+        this.props.getLeaveApprovedList();
     }
 
     render() {
@@ -41,7 +34,7 @@ class LeavePendingList extends Component {
                 {loading ? (
                 <Row>
                     <Colxx xxs="12">
-                        <AdminLeaveTable data={leaveItems} header="table.leave-pending-table" />
+                        <LeaveTable data={leaveItems} header="table.leave-approved-table" />
                     </Colxx>
                 </Row>
                 ) : (
@@ -60,7 +53,7 @@ export default injectIntl(
     connect(
         mapStateToProps,
         {
-            getLeavePendingList
+            getLeaveApprovedList
         }
-    )(LeavePendingList)
+    )(LeaveApprovedList)
 );

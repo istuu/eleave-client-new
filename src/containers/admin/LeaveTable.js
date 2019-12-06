@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 
 
-export class AdminLeaveTable extends Component {
+export class LeaveTable extends Component {
     constructor(props) {
         super(props);
 
@@ -100,13 +100,13 @@ export class AdminLeaveTable extends Component {
     render() {
         const { data,header }   = this.props;
         const { dataTableColumns,modal,detail }   = this.state;
-        console.log(detail)
         return (
             <Card className="mb-4">
                 <CardBody>
                     <CardTitle>
                         <IntlMessages id={header} />
                     </CardTitle>
+                    {data !== null ? (
                     <ReactTable
                         data={data}
                         columns={dataTableColumns}
@@ -116,6 +116,9 @@ export class AdminLeaveTable extends Component {
                         PaginationComponent={DataTablePagination}
                         className={"react-table"}
                     />
+                    ) : (
+                        "There is no data for this list!"
+                    )} 
                 </CardBody>
                 {detail !== null ? (
                 <Modal isOpen={modal}>
