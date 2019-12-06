@@ -5,9 +5,9 @@ import {
     LEAVE_LIST_GET_PENDING_LIST,
     LEAVE_LIST_GET_APPROVED_LIST,
     LEAVE_LIST_GET_REJECTED_LIST,
-} from '../actions';
+} from '../../actions';
 
-import { serviceAPI } from "../../constants/defaultValues";
+import { serviceAPI } from "../../../constants/defaultValues";
 
 import {
 	getLeavePendingListSuccess,

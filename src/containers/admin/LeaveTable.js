@@ -13,7 +13,7 @@ import {
     ModalHeader,
 } from "reactstrap";
 
-
+import Swal from 'sweetalert2';
 export class LeaveTable extends Component {
     constructor(props) {
         super(props);
@@ -74,7 +74,7 @@ export class LeaveTable extends Component {
                             <Button color="info" size="xs" className="mb-2" title="Detail Leave Request" onClick={() => this.showDetail(props.original)}>
                                 <div className="glyph-icon simple-icon-eye" />
                             </Button>
-                            <Button color="danger" size="xs" className="mb-2" title="Delete Leave Request">
+                            <Button color="danger" size="xs" className="mb-2" title="Delete Leave Request" onClick={() => this.deleteData(props.original)}>
                                 <div className="glyph-icon simple-icon-trash" />
                             </Button>
                         </div>,
@@ -89,6 +89,27 @@ export class LeaveTable extends Component {
             modal: true,
             detail: props
         });
+    };
+
+    deleteData(props){
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.value) {
+                
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        })
     };
 
     toggle = () => {

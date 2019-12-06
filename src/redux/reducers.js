@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import employeeListApp from './employeeList/reducer';
-import leaveListApp from './leaveList/reducer';
+import leaveListApp from './leaveRequest/list/reducer';
+import leaveDeleteApp from './leaveRequest/delete/reducer';
 import userApp from './user/reducer';
 import settings from './settings/reducer';
 import menu from './menu/reducer';
@@ -13,6 +14,7 @@ import surveyDetailApp from './surveyDetail/reducer';
 const reducers = combineReducers({
   employeeListApp,
   leaveListApp,
+  leaveDeleteApp,
   userApp,
   menu,
   settings,

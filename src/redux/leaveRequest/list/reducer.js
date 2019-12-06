@@ -8,7 +8,7 @@ import {
 	LEAVE_LIST_GET_REJECTED_LIST,
     LEAVE_LIST_GET_REJECTED_LIST_SUCCESS,
     LEAVE_LIST_GET_REJECTED_LIST_ERROR
-} from '../actions';
+} from '../../actions';
 
 
 const INIT_STATE = {

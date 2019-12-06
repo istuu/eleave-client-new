@@ -1,6 +1,7 @@
 import { all } from 'redux-saga/effects';
 import employeeListSagas from './employeeList/saga';
-import leaveListSagas from './leaveList/saga';
+import leaveListSagas from './leaveRequest/list/saga';
+import leaveDeleteSagas from './leaveRequest/delete/saga';
 import userSagas from './user/saga';
 import authSagas from './auth/saga';
 import todoSagas from './todo/saga';
@@ -12,9 +13,9 @@ export default function* rootSaga(getState) {
   yield all([
     employeeListSagas(),
     leaveListSagas(),
+    leaveDeleteSagas(),
     userSagas(),
     authSagas(),
-    
     todoSagas(),
     chatSagas(),
     surveyListSagas(),
